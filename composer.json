@@ -1,0 +1,41 @@
+{
+	"name" : "pluf/lm",
+	"description" : "LM",
+	"type" : "library",
+	"homepage" : "http://pluf.ir",
+	"license" : "GPL-3.0+",
+	"authors" : [{
+			"name" : "Mostafa Barmshory",
+			"email" : "mostafa.barmshory@gmail.com",
+			"homepage" : "http://pluf.ir",
+			"role" : "developer"
+		}
+	],
+	"support" : {
+		"email" : "info@pluf.ir",
+		"issues" : "http://pluf.ir",
+		"forum" : "http://pluf.ir",
+		"wiki" : "http://pluf.ir",
+		"source" : "http://pluf.ir"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Pluf\\Lm\\" : "src",
+			"Pluf\\Http\\" : "http-src"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Pluf\\Tests\\" : "tests"
+		}
+	},
+	"require" : {
+		"pluf/di" : "^7.0",
+		"pluf/log" : "^7.0",
+		"pluf/scion" : "^7.0"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "^9",
+		"pluf/http2" : "^7.0"
+	}
+}
