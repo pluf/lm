@@ -1,9 +1,8 @@
 <?php
-namespace Pluf\Http\Process;
+namespace Pluf\Lm\Process;
 
-class IfMethodIsGet
+class CreateCustomers
 {
-    
     public function __invoke(){
         
     }

@@ -21,7 +21,7 @@
 	"autoload" : {
 		"psr-4" : {
 			"Pluf\\Lm\\" : "src",
-			"Pluf\\Http\\" : "http-src"
+			"Pluf\\Scion\\Process\\Http\\" : "http-process"
 		}
 	},
 	"autoload-dev" : {
@@ -30,12 +30,13 @@
 		}
 	},
 	"require" : {
-		"pluf/di" : "^7.0",
-		"pluf/log" : "^7.0",
-		"pluf/scion" : "^7.0"
+		"pluf/scion" : "^7.0",
+		"pluf/orm" : "^7.0"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "^9",
+		"pluf/log" : "^7.0",
+		"pluf/di" : "^7.0",
 		"pluf/http2" : "^7.0"
 	}
 }
