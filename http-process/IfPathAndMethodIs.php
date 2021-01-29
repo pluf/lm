@@ -21,27 +21,23 @@ namespace Pluf\Scion\Process\Http;
 use Pluf\Scion\UnitTrackerInterface;
 use Psr\Http\Message\RequestInterface;
 
-/**
- * Checks if the request path match with the given one.
- * 
- * @author maso
- */
-class IfPathIs
+class IfPathAndMethodIs
 {
 
     private string $regex;
 
+    private array $methods;
+
     private bool $removePrefix = true;
 
-    /**
-     * Create new instance of the process
-     * 
-     * @param string $regex to match with request path
-     * @param bool $removePrefix should remove the pattern from the path
-     */
-    public function __construct(string $regex, bool $removePrefix = true)
+    public function __construct(string $regex, array $methods = [
+        'GET',
+        'POST',
+        'DELETE'
+    ], bool $removePrefix = true)
     {
         $this->regex = $regex;
+        $this->methods = $methods;
         $this->removePrefix = $removePrefix;
     }
 
@@ -49,8 +45,9 @@ class IfPathIs
     {
         $uri = $request->getUri();
         $requestPath = $uri->getPath();
+        $method = $request->getMethod();
         $match = [];
-        if (! preg_match($this->regex, $requestPath, $match)) {
+        if (! in_array($method, $this->methods) || ! preg_match($this->regex, $requestPath, $match)) {
             return $unitTracker->jump();
         }
         if ($this->removePrefix) {
