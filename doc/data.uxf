@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2040</x>
-      <y>660</y>
+      <x>1560</x>
+      <y>460</y>
       <w>420</w>
       <h>540</h>
     </coordinates>
@@ -30,8 +30,8 @@ License
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2040</x>
-      <y>1620</y>
+      <x>1560</x>
+      <y>1180</y>
       <w>420</w>
       <h>280</h>
     </coordinates>
@@ -48,22 +48,22 @@ LicenseLimit
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2220</x>
-      <y>1180</y>
+      <x>1740</x>
+      <y>980</y>
       <w>180</w>
-      <h>480</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..n
 m2=1
 &lt; aplyed</panel_attributes>
-    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>780</y>
+      <x>740</x>
+      <y>580</y>
       <w>420</w>
       <h>300</h>
     </coordinates>
@@ -80,22 +80,22 @@ LicenseSign
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1420</x>
-      <y>900</y>
-      <w>660</w>
+      <x>1140</x>
+      <y>700</y>
+      <w>460</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=3
 m2=1
 &lt; subject of the license</panel_attributes>
-    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2040</x>
-      <y>0</y>
+      <x>2340</x>
+      <y>600</y>
       <w>420</w>
       <h>240</h>
     </coordinates>
@@ -111,15 +111,15 @@ Customer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2220</x>
-      <y>220</y>
-      <w>180</w>
-      <h>480</h>
+      <x>1960</x>
+      <y>700</y>
+      <w>420</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..n
 m2=1
-&lt; aplyed</panel_attributes>
-    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+&lt; buys</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
 </diagram>

@@ -17,8 +17,8 @@
 	colors="true">
 	<coverage includeUncoveredFiles="true">
 		<include>
-			<directory suffix=".php">./src</directory>
-			<directory suffix=".php">./http-process</directory>
+			<directory suffix=".php">src</directory>
+			<directory suffix=".php">http-process</directory>
 		</include>
 		<report>
 			<clover outputFile=".build/clover.xml" />
@@ -34,7 +34,16 @@
 	</php>
 	<testsuites>
 		<testsuite name="http process">
-			<directory>./tests/Process/Http/</directory>
+			<directory>tests/Process/Http/</directory>
+		</testsuite>
+		<testsuite name="LM Data">
+			<directory>tests/Lm/Data</directory>
+		</testsuite>
+		<testsuite name="LM Process">
+			<directory>tests/Lm/Process</directory>
+		</testsuite>
+		<testsuite name="LM API">
+			<directory>tests/Lm/Api</directory>
 		</testsuite>
 	</testsuites>
 	<!-- Code coverage -->

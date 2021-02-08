@@ -1,0 +1,28 @@
+{
+	"name" : "pluf/standalone-lm",
+	"description" : "LM",
+	"type" : "library",
+	"homepage" : "http://pluf.ir",
+	"license" : "GPL-3.0+",
+	"authors" : [{
+			"name" : "Mostafa Barmshory",
+			"email" : "mostafa.barmshory@gmail.com",
+			"homepage" : "http://pluf.ir",
+			"role" : "developer"
+		}
+	],
+	"support" : {
+		"email" : "info@pluf.ir",
+		"issues" : "http://pluf.ir",
+		"forum" : "http://pluf.ir",
+		"wiki" : "http://pluf.ir",
+		"source" : "http://pluf.ir"
+	},
+	"require" : {
+		"pluf/lm" : "^7.0",
+		"pluf/di" : "^7.0",
+		"pluf/log" : "^7.0",
+		"pluf/orm" : "^7.0",
+		"pluf/http2" : "^7.0"
+	}
+}

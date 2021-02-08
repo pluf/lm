@@ -1,18 +1,24 @@
 <?php
 namespace Pluf\Lm;
 
-# [Entity]
-# [Table("lm_customer")]
+use Pluf\Data\Attribute\Entity;
+use Pluf\Data\Attribute\Table;
+use Pluf\Data\Attribute\Id;
+use Pluf\Data\Attribute\Column;
+
+#[Entity]
+#[Table("lm_customer")]
 class Customer
 {
-    # [Id]
-    # [Columne("id")]
-    public $id;
 
-    # [Columne("title")]
-    public string $title;
+    #[Id]
+    #[Column("id")]
+    public int $id = 0;
 
-    # [Columne("title")]
-    public string $description;
+    #[Column("title")]
+    public ?string $title = "";
+
+    #[Column("title")]
+    public ?string $description = "";
 }
 

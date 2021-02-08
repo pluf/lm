@@ -1,0 +1,28 @@
+{
+  "name": "lm",
+  "version": "1.0.0",
+  "description": "License manager is a micro system to generate and manage electronical signed licenses.",
+  "main": "index.js",
+  "scripts": {
+    "contractTests": "npm run startserver && node ./apiContractTest.js",
+    "startserver": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pluf/lm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pluf/lm/issues"
+  },
+  "homepage": "https://github.com/pluf/lm#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "newman": "^4.5.4"
+  }
+}

@@ -12,36 +12,23 @@ $units = [
     Process\Http\Coder::class,
     Process\Http\CatchException::class,
     [
-        new Process\Http\IfPathIs('^/licenses'), 
+        new Process\Http\IfPathAndMethodIs('^/customers', ['GET', 'POST','DELETE']), 
+        Lm\Process\EntityManagerFactory::class,
         [
             Process\Http\IfMethodIsGet::class,
             Lm\Process\FindLicenses::class
         ],
         [
             Process\Http\IfMethodIsPost::class,
-            Lm\Process\CreateLicenses::class
+            Lm\Process\EntityManagerTransaction::class,
+            Lm\Process\CreateEntities::class
         ],
         [
             Process\Http\IfMethodIsDelete::class,
+            Lm\Process\EntityManagerTransaction::class,
             Lm\Process\DeleteLicenses::class
         ],
     ],
-    [
-        new Process\Http\IfPathIs('^/licenses/(?P<id>\d+)'),
-        Lm\Process\LoadLicense::class,
-        [
-            Process\Http\IfMethodIsGet::class,
-            Lm\Process\ReturnLicense::class
-        ],
-        [
-            Process\Http\IfMethodIsDelete::class,
-            Lm\Process\DeleteLicense::class
-        ],
-        [
-            Process\Http\IfMethodIsPost::class,
-            Lm\Process\UpdateLicense::class
-        ],
-    ]
 ];
 
 $container = new Di\Container();
